@@ -50,21 +50,56 @@
  * para detalhes.
  */
 
-package muralufg.fabrica.inf.ufg.br.centralufg;
-
-import android.app.Application;
+package muralufg.fabrica.inf.ufg.br.centralufg.classificados.pojos;
 
 /**
- * Classe de aplicação.
- * Esta classe serve para se obter o contexto da aplicação.
+ * Classe que representa um classificado.
  */
-public class App extends Application {
-    private static App instance;
-    public static App getContext() { return instance; }
+public class Classificado {
+    private int id;
+    private String titulo;
+    private String autor;
+    private String dataCriacao;
+    private String descricao;
+    private String imagemUrl;
+    private String email;
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        instance = this;
+    public Classificado(int id, String titulo, String autor, String dataCriacao, String descricao, String imagemUrl, String email) {
+        this.id = id;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.dataCriacao = dataCriacao;
+        this.descricao = descricao;
+        this.imagemUrl = imagemUrl;
+        this.email = email;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public String getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public String getImagemUrl() {
+        return imagemUrl;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
 }

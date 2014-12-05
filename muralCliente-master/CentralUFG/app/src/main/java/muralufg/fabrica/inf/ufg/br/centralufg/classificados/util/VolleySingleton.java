@@ -50,21 +50,34 @@
  * para detalhes.
  */
 
-package muralufg.fabrica.inf.ufg.br.centralufg;
+package muralufg.fabrica.inf.ufg.br.centralufg.classificados.util;
 
-import android.app.Application;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
+
+import muralufg.fabrica.inf.ufg.br.centralufg.App;
 
 /**
- * Classe de aplicação.
- * Esta classe serve para se obter o contexto da aplicação.
+ * Singleton para o Volley.
+ * Esta classe permite que apenas uma instância do Volley seja criada no contexto da aplicação.
  */
-public class App extends Application {
-    private static App instance;
-    public static App getContext() { return instance; }
+public class VolleySingleton {
+    private static VolleySingleton mInstance = null;
+    private RequestQueue mRequestQueue;
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        instance = this;
+    private VolleySingleton() {
+        mRequestQueue = Volley.newRequestQueue(App.getContext());
+        mInstance = this;
+    }
+
+    public static synchronized VolleySingleton getInstance(){
+        if(mInstance == null){
+            mInstance = new VolleySingleton();
+        }
+        return mInstance;
+    }
+
+    public RequestQueue getRequestQueue() {
+        return mRequestQueue;
     }
 }

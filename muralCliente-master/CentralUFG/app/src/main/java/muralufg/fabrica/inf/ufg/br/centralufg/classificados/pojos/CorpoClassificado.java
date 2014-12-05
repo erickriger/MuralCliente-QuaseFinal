@@ -50,21 +50,33 @@
  * para detalhes.
  */
 
-package muralufg.fabrica.inf.ufg.br.centralufg;
-
-import android.app.Application;
+package muralufg.fabrica.inf.ufg.br.centralufg.classificados.pojos;
 
 /**
- * Classe de aplicação.
- * Esta classe serve para se obter o contexto da aplicação.
+ * Classe que representa o corpo de um classificado.
+ * Na ExpandableList, ela é o equivalente a Child.
  */
-public class App extends Application {
-    private static App instance;
-    public static App getContext() { return instance; }
+public class CorpoClassificado {
+    private String descricao;
+    private String imagemUrl;
+    private String email;
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        instance = this;
+    public CorpoClassificado(String descricao, String imagemUrl, String email) {
+        this.descricao = descricao;
+        this.imagemUrl = imagemUrl;
+        this.email = email;
     }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public String getImagemUrl() {
+        return imagemUrl;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
 }

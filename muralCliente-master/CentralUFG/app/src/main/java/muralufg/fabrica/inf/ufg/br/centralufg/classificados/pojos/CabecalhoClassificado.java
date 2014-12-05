@@ -50,21 +50,29 @@
  * para detalhes.
  */
 
-package muralufg.fabrica.inf.ufg.br.centralufg;
-
-import android.app.Application;
+package muralufg.fabrica.inf.ufg.br.centralufg.classificados.pojos;
 
 /**
- * Classe de aplicação.
- * Esta classe serve para se obter o contexto da aplicação.
+ * Classe que representa o cabeçalho de um classificado.
+ * Na ExpandableList, ela é equivalente ao Group.
  */
-public class App extends Application {
-    private static App instance;
-    public static App getContext() { return instance; }
+public class CabecalhoClassificado {
+    private Classificado classificado;
+    private CorpoClassificado corpoClassificado;
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        instance = this;
+    public CabecalhoClassificado(Classificado classificado) {
+        this.classificado = classificado;
+    }
+
+    public Classificado getClassificado() {
+        return classificado;
+    }
+
+    public CorpoClassificado getCorpoClassificado() {
+        return corpoClassificado;
+    }
+
+    public void setCorpoClassificado(CorpoClassificado corpoClassificado) {
+        this.corpoClassificado = corpoClassificado;
     }
 }

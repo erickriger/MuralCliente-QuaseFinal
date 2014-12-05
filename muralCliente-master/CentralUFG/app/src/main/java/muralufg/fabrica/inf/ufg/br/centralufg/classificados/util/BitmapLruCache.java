@@ -50,21 +50,40 @@
  * para detalhes.
  */
 
-package muralufg.fabrica.inf.ufg.br.centralufg;
+package muralufg.fabrica.inf.ufg.br.centralufg.classificados.util;
 
-import android.app.Application;
+import android.graphics.Bitmap;
+import android.support.v4.util.LruCache;
+
+import com.android.volley.toolbox.ImageLoader;
 
 /**
- * Classe de aplicação.
- * Esta classe serve para se obter o contexto da aplicação.
+ * Classe responsável pelo controle de cache das imagens.
  */
-public class App extends Application {
-    private static App instance;
-    public static App getContext() { return instance; }
+public class BitmapLruCache extends LruCache<String, Bitmap>
+        implements ImageLoader.ImageCache {
+
+    static int getMaxCacheSize() {
+        int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);
+        return maxMemory / 8;
+    }
+
+    public BitmapLruCache() {
+        super(getMaxCacheSize());
+    }
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-        instance = this;
+    protected int sizeOf(String key, Bitmap value) {
+        return value.getRowBytes() * value.getHeight();
+    }
+
+    @Override
+    public Bitmap getBitmap(String url) {
+        return get(url);
+    }
+
+    @Override
+    public void putBitmap(String url, Bitmap bitmap) {
+        put(url, bitmap);
     }
 }

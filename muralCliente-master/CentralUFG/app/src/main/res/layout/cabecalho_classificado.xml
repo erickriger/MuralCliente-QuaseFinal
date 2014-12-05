@@ -2,7 +2,8 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="72dp">
+    android:layout_height="72dp"
+    android:background="@color/gplus_color_6">
 
     <com.android.volley.toolbox.NetworkImageView
         android:id="@+id/cabecalho_imagem_classificado"
@@ -14,8 +15,7 @@
         android:layout_marginBottom="16dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:layout_gravity="center"
-        android:src="@drawable/abc_ab_solid_dark_holo"/>
+        android:layout_gravity="center"/>
 
     <LinearLayout
         android:orientation="vertical"
@@ -27,26 +27,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:textSize="16sp"
-            android:text="Título do Classificado"/>
+            android:textSize="16sp"/>
         <TextView
             android:id="@+id/cabecalho_autor_classificado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:textSize="14sp"
-            android:textColor="@android:color/darker_gray"
-            android:text="Autor do Classificado"/>
+            android:textSize="14sp"/>
     </LinearLayout>
     <TextView
         android:id="@+id/cabecalho_data_classificado"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="right"
+        android:gravity="end"
         android:paddingTop="16dp"
         android:paddingRight="16dp"
         android:paddingLeft="16dp"
-        android:textSize="14sp"
-        android:textColor="@android:color/darker_gray"
-        android:text="data"/>
+        android:textSize="14sp"/>
 </LinearLayout>
