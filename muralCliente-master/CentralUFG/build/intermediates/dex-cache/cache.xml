@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/pre-dexed/debug/classes-ac0d52e738bdffb822e0db2a778382402f01d7b4.jar"
+        jar="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
+    <item
+        dex="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/pre-dexed/debug/classes-f4825cbd92ae65e78864635304644a2b7ada5d47.jar"
+        jar="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/exploded-aar/de.keyboardsurfer.android.widget/crouton/1.8.4/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="ef6e7d100ebc7feca53c3e2445b8e63ce4dea90c"/>
+    <item
+        dex="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/pre-dexed/debug/log4j-1.2.17-92bbd5a3831e31d76dc43432a8ec840f391f09e2.jar"
+        jar="/home/eric/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.17/5af35056b4d257e4b64b9e8069c0746e8b08629f/log4j-1.2.17.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="5af35056b4d257e4b64b9e8069c0746e8b08629f"/>
+    <item
+        dex="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/pre-dexed/debug/classes-964edd4466371359f047461f8800c880e350ec5a.jar"
+        jar="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-50d136a26e777b3ceafe4a4db53f8903a11ab24f.jar"
+        jar="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/pre-dexed/debug/android-logging-log4j-1.0.2-4378fbf3e7022661a0452fbc33877aa82fd3a908.jar"
+        jar="/home/eric/.gradle/caches/modules-2/files-2.1/de.mindpipe.android/android-logging-log4j/1.0.2/7c7ee63dabb2fa6436f652dde5a79d060ef8674b/android-logging-log4j-1.0.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="7c7ee63dabb2fa6436f652dde5a79d060ef8674b"/>
+    <item
+        dex="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/pre-dexed/debug/classes-9c858d475f23414706ac3f204c1a093736170ff9.jar"
+        jar="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da"/>
+    <item
+        dex="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/pre-dexed/debug/classes-961fdac6ce0847eb77284e66b35fd29c0d7d186c.jar"
+        jar="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/exploded-aar/com.github.castorflex.smoothprogressbar/library/0.5.2/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="00c945daa09c5775dcb0c61f19cee94b7916a28d"/>
+    <item
+        dex="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/pre-dexed/debug/library-1.0.6-3f9b1d46a4bfb36b12dbfdd65bd0fbb2f89e597e.jar"
+        jar="/home/eric/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.6/b2e6988baeea1aed656995f973aaa2fc3feaf447/library-1.0.6.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="b2e6988baeea1aed656995f973aaa2fc3feaf447"/>
+    <item
+        dex="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/pre-dexed/debug/http-request-5.6-f46160c6a13825222918b653cb62e0ce26738c51.jar"
+        jar="/home/eric/.gradle/caches/modules-2/files-2.1/com.github.kevinsawicki/http-request/5.6/168305b7a983142b6311a005f0ad96d3b34d92d/http-request-5.6.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="0168305b7a983142b6311a005f0ad96d3b34d92d"/>
+    <item
+        dex="/home/eric/Downloads/muralCliente-master/CentralUFG/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-45196fb3ed0ae180cff5cd2a3731c1040c66e8f8.jar"
+        jar="/home/eric/Android Studio/android-studio/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+
+</pre-dex-items>
