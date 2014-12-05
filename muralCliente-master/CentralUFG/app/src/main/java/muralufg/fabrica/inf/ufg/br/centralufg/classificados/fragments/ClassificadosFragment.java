@@ -2,12 +2,14 @@ package muralufg.fabrica.inf.ufg.br.centralufg.classificados.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.ExpandableListView;
 
 import com.android.volley.Response;
@@ -33,6 +35,7 @@ import muralufg.fabrica.inf.ufg.br.centralufg.classificados.VolleySingleton;
  * Created by eric on 04/12/14.
  */
 public class ClassificadosFragment extends Fragment {
+    ExpandableListView expandableListView;
     ExpandableListAdapter mAdapter;
     private SwipeRefreshLayout swipeLayout;
     private static String URL_SERVIDOR_UFG = "http://invisiblerails.com/web/tacs/jsonClassificados.json";
@@ -52,13 +55,41 @@ public class ClassificadosFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+
         fetch();
 
         mAdapter = new ExpandableListAdapter(getActivity());
-
-        ExpandableListView expandableListView = (ExpandableListView) getView().findViewById(R.id.expandableListView);
+        swipeLayout = (SwipeRefreshLayout) getView().findViewById(R.id.swipe_container);
+        expandableListView = (ExpandableListView) getView().findViewById(R.id.expandableListView);
         expandableListView.setAdapter(mAdapter);
 
+        /* Serve para só acionar o refresh se o primeiro item da lista estiver totalmente visível */
+        expandableListView.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView absListView, int i) {
+
+            }
+
+            @Override
+            public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+                if (firstVisibleItem == 0)
+                    swipeLayout.setEnabled(true);
+                else
+                    swipeLayout.setEnabled(false);
+            }
+        });
+
+        swipeLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new Handler().postDelayed(new Runnable() {
+                    @Override public void run() {
+                        fetch();
+                        swipeLayout.setRefreshing(false);
+                    }
+                }, 5000);
+            }
+        });
     }
 
     private void fetch() {
@@ -69,6 +100,7 @@ public class ClassificadosFragment extends Fragment {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
                         try {
+
                             List<Classificado> classificados = parse(jsonObject);
                             mAdapter.separarClassificados(classificados);
                             //mAdapter.swapImageRecords(classificados);
@@ -112,5 +144,6 @@ public class ClassificadosFragment extends Fragment {
 
         return records;
     }
+
 
 }

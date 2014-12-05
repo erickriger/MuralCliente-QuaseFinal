@@ -36,6 +36,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     public void separarClassificados(List<Classificado> listaClassificados) {
+        listaCabecalhosClassificados.clear();
         for (Classificado classificado : listaClassificados) {
             CabecalhoClassificado cabecalho = new CabecalhoClassificado(classificado);
             CorpoClassificado corpo = new CorpoClassificado(classificado.getDescricao(), classificado.getImagemUrl(), classificado.getEmail());
